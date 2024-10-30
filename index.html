@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bookmark</title>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&family=Reddit+Sans+Condensed:wght@200..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+
+</html>
+<body>
+    <div class="w-50 mx-auto" id="mainContainer">
+        <div class="heading">
+            <h2 class="text-center mt-5  mb-3 pt-3 fw-bold"><i class="fas fa-bookmark me-3"></i>Bookmark Your Favourite Site <i class="fas fa-bookmark ms-3"></i></h2>
+        </div>
+        <div class="my-3">
+            <label for="inputName" class="form-label"><i class="fas fa-save me-2"></i>Site Name</label>
+            <input class="form-control form-control-lg" id="inputName" type="text">
+          <span id="alertName" class="alert d-none mt-1" role="alert">
+            <strong>Name should contain 2 char at least and Can't be empty..</strong>
+          </span>
+       </div>
+        <div class="mb-3">
+            <label for="inputUrl" class="form-label"><i class="fas fa-link me-2"></i>Site URL</label>
+            <input class="form-control form-control-lg" id="inputUrl" type="url">
+            <div id="alertUrl" class="alert d-none mt-1" role="alert">
+                <strong>URL must be a valid Link ...</strong>
+            </div>         
+        </div>
+
+        <button class="btn-main  fw-bold mx-auto text-center" id="inputAddBook">Add URL</button>
+        <button class="btn-main d-none fw-bold  mx-auto text-center" id="inputUpdateBook">Update URL</button>
+    </div>
+
+
+    <div class="my-4 w-50 mx-auto" id="searchContainer">
+        <input onkeyup="searchProduct(this.value)" class="form-control me-2 form-control-lg" type="search" placeholder="Search For URL" aria-label="Search">
+    </div>
+    <table class="w-50 mx-auto table table-light text-center py-3" id="disTable">
+        <thead>
+            <th class="py-3">Index</th>
+            <th class="py-3">Website Name</th>
+            <th class="py-3">Visit</th>
+            <th class="py-3">Update</th>
+            <th class="py-3">Delete</th>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
